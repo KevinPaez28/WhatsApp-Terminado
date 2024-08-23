@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.body{
+
+  background-color: beige;
+}
+.contenedor{
+  font-family: "Moderustic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  background-color: white;
+  max-width:350px;
+  height:600px;
+  margin: 20px auto;
+  border:solid 1px black;
+  font-size:18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  background-color:rgb(19, 105, 45);
+  width: 100%;
+  height: 90px;
+  color:#adb4b0;
+  padding: 10px;
+  
+}
+.Menusuperior{
+ max-width:450px;
+ height: 40px;
+ display: flex;
+ margin-bottom: 10px;
+}
+.Menusuperior__WhatsApp{
+ margin-top: 12px;
+ cursor: pointer;
+ 
+}
+.Menusuperior__iconos{
+  margin-top:12px;
+  padding-left:60%;
+  cursor: pointer;
+}
+
+label{
+  display: block;
+}
+
+.Menuinferior {
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+  
+}
+.Menuinferior__Chats{
+  cursor: pointer;
+  border-bottom: 7px solid white;
+
+}
+
+/*CHATS*/ 
+.main{
+  overflow-y: scroll;
+}
+.Contenedor-Chats__chat{
+  display: flex;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+.Contenedor-Chats__chat:hover{
+background-color: #adb4b0;
+}
+.chat__contenido{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+}
+.chat__Foto-perfil{
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin: 10px
+}
+.chat-texto{
+  margin:5px 10px auto;
+} 
+.chat__Persona{
+  line-height: 30px;
+  font-size: 20px;
+  color:#111;
+}
+.chat__mensaje{
+  color: #111;
+  font-size: 17px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.chat__mensaje p{
+  display: block;
+  margin:5px;
+}
+.chat__mensaje span{
+  background-color: green;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+.Contenedor__Mensajes{
+  display: flex;
+  width:50px;
+  height: 50px;
+  border-radius:100px;
+  background-color: green;
+  bottom: 10px;
+  position: absolute;
+  z-index: 1;
+  right: 30px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* ESTADOS */
+.Estados{
+ max-width:350px;
+ height:600px;
+ display: flex;
+ flex-direction: column; 
+}
+.Contenedor__Estados{
+  display: flex;
+  height:65px;
+  width:330px;
+  align-items: center;
+}
+.Contenedor__Estados:hover{
+  background-color: #adb4b0;
+
+}
+.Estados__foto-perfil{
+ width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin: 10px
+}
+.Texto__actualizacion{
+  margin:15px 0px ;
+  font-size: 15px;
+  color:grey;
+}
+.Estados__foto-perfilActivo{
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin: 10px;
+  border: 3px solid rgb(30, 153, 61)
+}
+
+/* LLamadas  */
+.Llamadas{
+ max-width:350px;
+ height:600px;
+ flex-direction: row;
+}
+
+.Llamada__Clic {
+  display: flex;
+  align-items: center;
+  
+}
+.Llamada__Contenido{
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  width:50px;
+  height:50px;
+  border-radius:100px;
+  color: white;
+  background-color: rgb(12, 105, 12);
+  margin: 10px;
+}
+.Contenedor__Llamadas{
+  height:65px;
+  width:330px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Contenedor__Llamadas:hover{
+  background-color: #adb4b0;
+}
+.Llamada__Flecha{
+  font-size:12px;
+  margin:2px
+}
+.Llamadas__Content{
+  margin:5px 10px auto;
+}
+
+.Logo__Telefono{
+  margin-left:25%;
+  color:rgb(30, 153, 61)
+}
+
+
+/* Interfaz */
+
+.Content{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.Content  .Chats { 
+ transition: all 600ms ease;
+ opacity: 0;
+ visibility: hidden;
+ transform: scale(0.90);
+}
+.Content .estados{
+ position: absolute;
+ transition: all 600ms ease;
+ opacity: 0;
+ visibility: hidden;
+ transform: scale(0.90);
+}
+.Content .llamadas{
+ position: absolute;
+ transition: all 600ms ease;
+ opacity: 0;
+ visibility: hidden;
+ transform: scale(0.90);
+}
+
+#Menuinferior__Chats,#Menuinferior__Estados,#Menuinferior__Llamadas{
+  display: none;
+}
+
+#Menuinferior__Chats:checked~.Chats
+{
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+}
+#Menuinferior__Estados:checked~.estados{
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+}
+#Menuinferior__Llamadas:checked~.llamadas{
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+}
+
